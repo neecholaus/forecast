@@ -1,0 +1,56 @@
+body {
+  background: #e3e3e3;
+}
+
+#main-con {
+  background: #1ab4ba;
+}
+#main {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  color: white;
+}
+
+
+
+
+#main #address-input {
+  border-radius: 0;
+  border: none;
+  width: 100%;
+  padding: 8px 15px;
+}
+#main #address-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
+#main #address-find {
+  width: 100%;
+  border: none;
+  background-color: #f3f3f3;
+  color: #353535;
+  padding: 10px;
+  line-height: 20px;
+  transition: all ease 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+#main #address-find:hover {
+  background: #e3e3e3;
+}
+#main #address-find:focus {
+  outline: none;
+}
+
+
+
+
+*::selection {
+  background-color: #83e064;
+}

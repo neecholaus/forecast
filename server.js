@@ -10,6 +10,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('.'));
 
 app.get('/', function(request, response) {
+  response.header('Access-Control-Allow-Origin', '*');
   response.render('index');
 });
 

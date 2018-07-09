@@ -4,7 +4,8 @@
   "description": "Weather app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,11 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "webpack": "^4.15.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.8",
+    "nodemon": "^1.17.5"
   }
 }

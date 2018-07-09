@@ -1,1 +1,17 @@
-<h1>FORECAST</h1>
+<div id="main-con" class="p-5">
+  <div id="main">
+    <h1>Find Your Forecast</h1>
+    <h5 class="mt-4">Get real time weather stats in your area.</h5>
+    <input type="text" id="address-input" placeholder="Enter your address..." />
+    <button type="button" id="address-find">Find</button>
+  </div>
+</div>
+
+<div id="response">
+  <div v-if="response.length > 0">
+    <h3 class="text-muted">\{{ response[0] }}</h3>
+  </div>
+  <div v-else>
+    <h3 class="text-muted">No Results</h3>
+  </div>
+</div>
