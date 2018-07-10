@@ -1,17 +1,23 @@
-<div id="main-con" class="p-5">
-  <div id="main">
-    <h1>Find Your Forecast</h1>
-    <h5 class="mt-4">Get real time weather stats in your area.</h5>
-    <input type="text" id="address-input" placeholder="Enter your address..." />
-    <button type="button" id="address-find">Find</button>
+<div class="container-fluid" id="background">
+  <div id="main-con">
+    <div id="main">
+      <h1>Find a Forecast</h1>
+      <h5 class="mt-4">Get real time weather stats any area.</h5>
+      <input type="text" id="address-input" placeholder="Enter an address..." />
+      <button type="button" id="address-find" class="btn-primary">Find</button>
+    </div>
   </div>
 </div>
 
-<div id="response">
+<div id="response" class="p-5">
   <div v-if="response.length > 0">
-    <h3 class="text-muted">\{{ response[0] }}</h3>
+    <h2 class="text-muted mb-3">\{{ response[0].data.currently.temperature }}  &#176;F</h2>
+    <p>Timezone <span>\{{ response[0].data.timezone }}</span></p>
+    <p>Latitude <span>\{{ response[0].data.latitude }}</p>
+    <p>Longitude <span>\{{ response[0].data.longitude }}</p>
+    <p>Feels Like <span><b>\{{ response[0].data.currently.apparentTemperature }} &#176;F</b></p>
   </div>
   <div v-else>
-    <h3 class="text-muted">No Results</h3>
+    <h2 class="text-muted">No Results</h2>
   </div>
 </div>

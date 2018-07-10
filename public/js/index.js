@@ -36,17 +36,11 @@ function getCoords(address) {
 }
 
 function getForecast(coords) {
-  console.log(coords);
-
-  let url = `https://api.darksky.net/forecast/${DARKSKYAPI}/${coords.lat},${coords.lng}`;
-
-  axios.get(url, {
-    headers: {
-  	  'Access-Control-Allow-Origin': '*'
-  	}
+  axios.post('/weather', {
+    lat: coords.lat,
+    lng: coords.lng
   })
   .then(function(response) {
-    console.log(response);
     data.splice(0, data.length);
     data.push(response);
   })
